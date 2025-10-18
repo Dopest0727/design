@@ -25,7 +25,7 @@ export default function NavBar() {
 
   return (
     <nav className="w-full backdrop-blur-md shadow-sm transition-all bg-white/70 dark:bg-stone-900/70">
-      <div className="mx-auto grid max-w-5xl grid-cols-[150px_auto_150px] items-center px-6 py-3">
+      <div className="mx-auto grid max-w-7xl grid-cols-[150px_auto_150px] items-center px-6 py-3">
         {/* Left: Logo */}
         <div className="justify-self-start">
           <h1 className="text-xl font-semibold text-stone-900 tracking-tight dark:text-stone-100">

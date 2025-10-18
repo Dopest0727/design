@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 interface ProductCardProps {
   name: string;
-  image: string;
+  image: string | StaticImageData;
   price: number;
   oldPrice?: number;
   availableOnline?: boolean;
@@ -19,9 +20,9 @@ export default function ProductCard({
   availableInStore = false,
 }: ProductCardProps) {
   return (
-    <div className="group rounded-md border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 p-3 shadow-sm transition-all hover:shadow-md hover:-translate-y-1">
+    <div className="group rounded-xs border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 p-3 shadow-sm transition-all hover:shadow-md hover:-translate-y-1">
       {/* Product image */}
-      <div className="relative aspect-square w-full overflow-hidden rounded-md bg-stone-100 dark:bg-stone-800">
+      <div className="relative aspect-square w-full overflow-hidden rounded-xs bg-stone-100 dark:bg-stone-800">
         <Image
           src={image}
           alt={name}
@@ -43,12 +44,12 @@ export default function ProductCard({
               oldPrice ? "text-red-500" : "text-stone-100"
             }`}
           >
-            ${price.toFixed(2)}
+            kr {price.toFixed(2)}
           </p>
 
           {oldPrice && (
             <p className="text-sm text-stone-700 dark:text-stone-500 line-through">
-              ${oldPrice.toFixed(2)}
+              kr {oldPrice.toFixed(2)}
             </p>
           )}
         </div>
@@ -57,7 +58,7 @@ export default function ProductCard({
         <p className="text-xs text-stone-500 dark:text-stone-400">
           {availableOnline && "Online"}
           {availableOnline && availableInStore && " & "}
-          {availableInStore && "In Store"}
+          {availableInStore && "Varuhus"}
         </p>
       </div>
     </div>
