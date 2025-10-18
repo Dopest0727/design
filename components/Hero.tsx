@@ -23,15 +23,15 @@ export default function Hero() {
       <div className="absolute inset-0 flex justify-center">
         <div className="flex w-full max-w-7xl items-center justify-end px-6">
           <div className="max-w-md text-left">
-            <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-white drop-shadow-md">
+            <h1 className="text-3xl md:text-7xl font-semibold tracking-tight text-white drop-shadow-md">
               by Maurii <span className="text-red-500 ml-1">.</span>
             </h1>
-            <p className="mt-3 text-lg text-stone-200">
+            <p className="mt-3 text-xl text-stone-200">
               Där design möter enkelhet.
             </p>
             <Link
               href="/products"
-              className="mt-3 inline-block w-full text-center rounded-xs border border-stone-300/70 bg-white/10 px-6 py-2 text-sm font-medium text-white backdrop-blur-xs transition-all hover:border-red-500"
+              className="mt-3 inline-block text-center rounded-xs border border-stone-300/70 bg-white/10 px-6 py-2 text-sm font-medium text-white backdrop-blur-xs transition-all hover:border-red-500"
             >
               Visa sortiment
             </Link>

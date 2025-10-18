@@ -20,7 +20,7 @@ export default function ProductCard({
   availableInStore = false,
 }: ProductCardProps) {
   return (
-    <div className="group rounded-xs border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 p-3 shadow-sm transition-all hover:shadow-md hover:-translate-y-1">
+    <div className="group rounded-xs border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-900 p-3 shadow-sm transition-all hover:shadow-md hover:-translate-y-1">
       {/* Product image */}
       <div className="relative aspect-square w-full overflow-hidden rounded-xs bg-stone-100 dark:bg-stone-800">
         <Image
@@ -41,7 +41,7 @@ export default function ProductCard({
         <div className="flex items-baseline gap-4">
           <p
             className={`text-base font-semibold ${
-              oldPrice ? "text-red-500" : "text-stone-100"
+              oldPrice ? "text-red-500" : "text-stone-700 dark:text-stone-100"
             }`}
           >
             kr {price.toFixed(2)}
