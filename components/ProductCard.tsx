@@ -32,13 +32,13 @@ export default function ProductCard({
       </div>
 
       {/* Product info */}
-      <div className="mt-3 space-y-1">
-        <h3 className="text-sm font-medium text-stone-900 dark:text-stone-100 truncate">
+      <div className="mt-2 space-y-1">
+        <h3 className="text-lg font-medium text-stone-900 dark:text-stone-100 truncate">
           {name}
         </h3>
 
         {/* Price */}
-        <div className="flex items-baseline gap-2">
+        <div className="flex items-baseline gap-4">
           <p
             className={`text-base font-semibold ${
               oldPrice ? "text-red-500" : "text-stone-100"
